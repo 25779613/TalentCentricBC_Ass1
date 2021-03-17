@@ -99,7 +99,7 @@ public class Car_Dealership {
        BrandName = in.nextLine();
        while(!brandName.contains(BrandName.toLowerCase()) && counter<5)
        {
-           System.out.println(counter+"/5 tries. Please re-enter the brand of the vehicle eg: Audi,BMW,VW");
+           System.err.println(counter+"/5 tries. Please re-enter the brand of the vehicle eg: Audi,BMW,VW");
            BrandName = in.nextLine();
            counter++;
        }
@@ -109,7 +109,7 @@ public class Car_Dealership {
        
        while(!countries.contains(CountryOfOrigin.toLowerCase()) && !countryCode.contains(CountryOfOrigin.toLowerCase()) && counter < 5)// && counter != 5
        {
-           System.out.println(counter+"/5 tries. Please re-enter the country of origin as Country or Country Code");               
+           System.err.println(counter+"/5 tries. Please re-enter the country of origin as Country or Country Code");               
            CountryOfOrigin = in.nextLine();
            counter++;
        }
@@ -140,22 +140,22 @@ public class Car_Dealership {
                     if(Integer.valueOf(YearInput)<=CurrentYear && Integer.valueOf(YearInput)>=YearFirstCar)//Year can't be of next year and cant be before first car ever made
                       YearOfManufacture = Year.parse(YearInput);
                     else
-                      System.out.println(counter+"/5 tries. Please re-enter the year of manufacture");  
+                      System.err.println(counter+"/5 tries. Please re-enter the year of manufacture");  
                 }
                 catch(Exception e)
                 {                        
-                    System.out.println(counter+"/5 tries. Please re-enter the year of manufacture");                   
+                    System.err.println(counter+"/5 tries. Please re-enter the year of manufacture");                   
                     YearInput = "9999";
                 }
            }
            else
            {
-               System.out.println(counter+"/5 tries. Year has to be in format YYYY.\nPlease re-enter the year of manufacture");
+               System.err.println(counter+"/5 tries. Year has to be in format YYYY.\nPlease re-enter the year of manufacture");
                YearInput = "9999";
            }                   
             counter++;
        }
-       while(counter<=5 && Integer.valueOf(YearInput)>CurrentYear);                              
+       while(counter<=5 && Integer.valueOf(YearInput)>CurrentYear || Integer.valueOf(YearInput)< YearFirstCar);                              
 
     }
     
@@ -183,31 +183,40 @@ public class Car_Dealership {
            System.err.println("Your only choice is left/right");
            DriveType= in.nextLine();
        }
+       
 
        try
        {
            System.out.println("Please enter the number of doors");
            //number validation
-           NumOfDoors= Integer.valueOf(in.nextLine());
            counter =1;
+           NumOfDoors= Integer.valueOf(in.nextLine());
            while(NumOfDoors !=2 && NumOfDoors !=4 && counter<5)
            {
-               System.out.println(counter+"/5 tries.Incorrect Please re-enter the number of doors 2 or 4");
+               System.err.println(counter+"/5 tries.Incorrect Please re-enter the number of doors 2 or 4");
                NumOfDoors= Integer.valueOf(in.nextLine());
                counter++;
            }
-       }catch(Exception e)
+       }catch(NumberFormatException e)
        {
-            System.err.println(counter+"/5 tries .Please enter the number characters only ");
-            NumOfDoors= Integer.valueOf(in.nextLine());
-            
-           while(NumOfDoors !=2 && NumOfDoors !=4 && counter<5)
-           {
-               System.out.println(counter+"/5 tries.Incorrect the number of doors 2 or 4");
+          try
+          {
+               System.err.println(counter+"/5 tries .Please enter the number characters only ");
                NumOfDoors= Integer.valueOf(in.nextLine());
-               counter++;
-           }
 
+               while(NumOfDoors !=2 && NumOfDoors !=4 && counter<5)
+               {
+                   System.err.println(counter+"/5 tries.Incorrect the number of doors 2 or 4");
+                   NumOfDoors= Integer.valueOf(in.nextLine());
+                   counter++;
+               }
+
+          }catch(NumberFormatException ee)
+           {
+               System.out.println("Default number of doors has been set");
+               NumOfDoors = 4;
+           }
+          
        }
        
 
@@ -215,7 +224,7 @@ public class Car_Dealership {
        Color = in.nextLine();
        while(!colors.contains(Color.toLowerCase()))
        {
-           System.out.println("Please enter the color of the vehicle, again.");
+           System.err.println("Please enter the color of the vehicle, again.");
            Color = in.nextLine();
        }
       
@@ -239,7 +248,7 @@ public class Car_Dealership {
                driveTrain =false;
            else
            {
-               System.out.println("Please re-enter the drive train of the vehicle eg: AWD,4WD,2WD etc");
+               System.err.println("Please re-enter the drive train of the vehicle eg: AWD,4WD,2WD etc");
                DriveTrain = in.nextLine();
            }
        }
