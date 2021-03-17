@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package car_dealership;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,11 +30,13 @@ public class Car_Dealership {
     static int NumOfDoors;
     static String Color;
     static String DriveTrain;
+    static String newModel;
     
     static int CurrentYear = 2022;
     static final int YearFirstCar = 1886;
     
     static Scanner in = new Scanner(System.in);
+    static PrintStream fileWriter;
     static Scanner read;
     static int counter;
     
@@ -65,6 +67,9 @@ public class Car_Dealership {
        }catch(Exception e)
        {
            System.out.println(e);
+       }finally{
+           read.close();
+          // fileWriter.close();
        }
     }
     
@@ -72,7 +77,7 @@ public class Car_Dealership {
     {
        try
        {
-           read = new Scanner(new File("Car_models.txt"));
+           read = new Scanner(new File("Car_makes.txt"));
            while(read.hasNextLine())
            {
                brandName.add(read.nextLine());
@@ -87,6 +92,7 @@ public class Car_Dealership {
            {
                countryCode.add(read.nextLine());
            }
+           
        }
        catch(Exception e)
        {
@@ -121,9 +127,58 @@ public class Car_Dealership {
     
     public static void QuestionsModel()
     {
-        
+        try
+        {
+            read = new Scanner(new File("Car_models.txt"));
+           while(read.hasNextLine())
+           {
+               modelName.add(read.nextLine());
+           }
+        }catch(Exception e)
+        {
+            System.err.println("File doesnt exist");
+        }
+        counter =1;
         System.out.println("Please enter the model name eg: E46 320i");
        ModelName= in.nextLine();
+        while(!modelName.contains(ModelName.toLowerCase()) && counter<5)
+       {
+           /*if(!modelName.contains(ModelName.toLowerCase()))
+           {
+               System.out.println("Car does not exist in the directory do you wish to add it (y/n)");
+               newModel = in.nextLine();
+               try
+               {
+                   fileWriter = new PrintStream(new File("Car_models.txt"));
+                   switch(newModel.toLowerCase())
+                   {
+                       case "y" : 
+                           fileWriter.println(ModelName.toLowerCase());
+                           System.out.println("Please restart to use updated model directory");
+                           break;
+                       case "yes" :
+                           fileWriter.println(ModelName.toLowerCase());
+                           System.out.println("Please restart to use updated model directory");
+                           break;
+                       default:
+                           break;
+
+                   }
+                   
+               
+               }catch(Exception e)
+               {
+                   System.out.println("File doesnt exist");
+               }
+               
+               
+               
+
+           }*/
+           System.err.println(counter+"/5 tries. Please re-enter the brand of the vehicle eg: Audi,BMW,VW");
+           ModelName = in.nextLine();
+           counter++;
+       }
 
 
        //Year of Manufacture

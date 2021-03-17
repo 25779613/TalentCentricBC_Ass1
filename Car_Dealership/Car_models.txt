@@ -1,42 +1,505 @@
-audi
-bmw
-buick
-cadillac
-chevrolet
-chrysler
-dodge
-ferrari
-ford
-gm
-gem
-gmc
-honda
-hummer
-hyundai
-infiniti
-isuzu
-jaguar
-jeep
-kia
-lamborghini
-land rover
-lexus
-lincoln
-lotus
-mazda
-mercedes-benz
-mercury
-mitsubishi
-nissan
-oldsmobile
-peugeot
-pontiac
-porsche
-regal
-saab
-saturn
-subaru
-suzuki
-toyota
-volkswagen
-volvo
+a3
+a4
+a4 allroad
+a5
+a6
+a6 allroad
+a7
+acadia
+accent
+accord
+accord hybrid
+a-class
+altima
+ariya
+armada
+arteon
+ascent
+atlas
+atlas cross sport
+avalon
+avalon hybrid
+aventador
+aviator
+bentayga
+blazer
+bolt euv
+bolt ev
+bronco sport
+brz
+c40 recharge
+cadenza
+camaro
+camry
+camry hybrid
+canyon crew cab
+canyon extended cab
+carnival
+cayenne
+cayenne coupe
+c-class
+challenger
+charger
+cherokee
+c-hr
+civic
+civic type r
+cla
+clarity fuel cell
+clarity plug-in hybrid
+cls
+clubman
+colorado crew cab
+colorado extended cab
+compass
+continental
+convertible
+corolla
+corolla hatchback
+corolla hybrid
+corsair
+corvette
+countryman
+crosstrek
+cr-v
+cr-v hybrid
+ct4
+ct5
+ct6
+ct6-v
+cullinan
+cx-3
+cx-30
+cx-5
+cx-9
+dawn
+db11
+dbs superleggera
+defender 110
+defender 90
+discovery
+discovery sport
+durango
+e-class
+eclipse cross
+ecosport
+edge
+elantra
+elantra gt
+enclave
+encore
+encore gx
+envision
+e-pace
+equinox
+es
+escalade
+escalade esv
+escape
+e-tron
+expedition
+expedition max
+explorer
+express 2500 cargo
+express 2500 passenger
+express 3500 cargo
+express 3500 passenger
+f150 regular cab
+f150 super cab
+f150 supercrew cab
+f250 super duty crew cab
+f250 super duty regular cab
+f250 super duty super cab
+f350 super duty crew cab
+f350 super duty regular cab
+f350 super duty super cab
+f450 super duty crew cab
+f450 super duty regular cab
+fit
+forester
+forte
+f-pace
+frontier crew cab
+frontier king cab
+f-type
+fusion
+fusion plug-in hybrid
+g70
+g80
+g90
+g-class
+ghibli
+ghost
+giulia
+gla
+gladiator
+glb
+glc
+gle
+gls
+golf
+golf alltrack
+golf gti
+gr supra
+grand caravan passenger
+grand cherokee
+grand cherokee l
+grand wagoneer
+gs
+gtc4lusso
+gt-r
+gv80
+gx
+hardtop 2 door
+hardtop 4 door
+highlander
+highlander hybrid
+hr-v
+hummer ev
+huracan
+i3
+i8
+id.4
+ilx
+impala
+impreza
+insight
+ioniq electric
+ioniq hybrid
+ioniq plug-in hybrid
+i-pace
+is
+jetta
+jetta gli
+journey
+k5
+k900
+kicks
+kona
+kona electric
+land cruiser
+lc
+leaf
+legacy
+levante
+ls
+lx
+m2
+m4
+m5
+macan
+malibu
+maxima
+mazda3
+mazda6
+mdx
+mdx sport hybrid
+mercedes-amg a-class
+mercedes-amg c-class
+mercedes-amg cla
+mercedes-amg cls
+mercedes-amg e-class
+mercedes-amg g-class
+mercedes-amg glc
+mercedes-amg glc coupe
+mercedes-amg gt
+mercedes-amg s-class
+mercedes-amg slc
+mercedes-maybach s-class
+metris cargo
+metris passenger
+metris worker cargo
+metris worker passenger
+mirage
+mirage g4
+mirai
+mkz
+model 3
+model s
+model x
+model y
+mulsanne
+murano
+mustang
+mustang mach-e
+mx-5 miata
+mx-5 miata rf
+nautilus
+navigator
+navigator l
+nexo
+niro
+niro ev
+niro plug-in hybrid
+nsx
+nv1500 cargo
+nv200
+nv2500 hd cargo
+nv3500 hd cargo
+nv3500 hd passenger
+nx
+odyssey
+optima
+optima hybrid
+optima plug-in hybrid
+outback
+outlander
+outlander phev
+outlander sport
+pacifica
+pacifica hybrid
+palisade
+panamera
+passat
+passport
+pathfinder
+phantom
+pilot
+prius
+prius prime
+promaster cargo van
+promaster city
+promaster window van
+q3
+q5
+q50
+q60
+q7
+q8
+quattroporte
+qx50
+qx60
+qx80
+r1s
+r1t
+r8
+range rover
+range rover evoque
+range rover sport
+range rover velar
+ranger supercab
+ranger supercrew
+rav4
+rav4 hybrid
+rav4 prime
+rc
+rdx
+regal sportback
+regal tourx
+renegade
+ridgeline
+rio
+rlx
+rlx sport hybrid
+rogue
+rogue sport
+rs 5
+rx
+s3
+s4
+s5
+s6
+s60
+s8
+s90
+santa fe
+santa fe hybrid
+savana 2500 cargo
+savana 2500 passenger
+savana 3500 cargo
+savana 3500 passenger
+s-class
+sedona
+seltos
+sentra
+sequoia
+sienna
+sierra 1500 crew cab
+sierra 1500 double cab
+sierra 1500 regular cab
+sierra 2500 hd crew cab
+sierra 2500 hd double cab
+sierra 2500 hd regular cab
+sierra 3500 hd crew cab
+silverado 1500 crew cab
+silverado 1500 double cab
+silverado 1500 regular cab
+silverado 2500 hd crew cab
+silverado 2500 hd double cab
+silverado 2500 hd regular cab
+silverado 3500 hd crew cab
+sl
+slc
+sonata
+sonata hybrid
+sonic
+sorento
+soul
+soul ev
+spark
+sportage
+sprinter 1500 cargo
+sprinter 1500 cargo
+sprinter 1500 passenger
+sprinter 1500 passenger
+sprinter 2500 cargo
+sprinter 2500 cargo
+sprinter 2500 crew
+sprinter 2500 crew
+sprinter 2500 passenger
+sprinter 2500 passenger
+sprinter 3500 cargo
+sprinter 3500 cargo
+sprinter 3500 crew
+sprinter 3500 crew
+sprinter 3500 xd cargo
+sprinter 3500 xd crew
+sprinter 3500 xd crew
+sprinter 3500xd cargo
+sprinter 4500 cargo
+sprinter 4500 cargo
+sprinter 4500 crew
+sprinter 4500 crew
+sq5
+stelvio
+stinger
+suburban
+tacoma access cab
+tacoma double cab
+tahoe
+taycan
+telluride
+terrain
+tiguan
+titan crew cab
+titan king cab
+titan xd crew cab
+tlx
+trailblazer
+transit 150 cargo van
+transit 150 crew van
+transit 150 passenger van
+transit 150 van
+transit 150 wagon
+transit 250 cargo van
+transit 250 crew van
+transit 250 van
+transit 350 cargo van
+transit 350 hd van
+transit 350 passenger van
+transit 350 van
+transit 350 wagon
+transit connect cargo
+transit connect cargo van
+transit connect passenger wagon
+traverse
+trax
+tt
+tucson
+tundra crewmax
+tundra double cab
+urus
+ux
+v60
+v90
+vantage
+veloster
+venue
+venza
+versa
+voyager
+wraith
+wrangler
+wrangler unlimited
+wrx
+x1
+x2
+x3
+x3 m
+x4
+x5
+x6
+x6 m
+x7
+xc40
+xc60
+xc90
+xe
+xf
+xt4
+xt5
+xt6
+yaris
+yaris hatchback
+yukon
+yukon xl
+z4
+124 spider
+1500 classic crew cab
+1500 classic quad cab
+1500 classic regular cab
+1500 crew cab
+1500 quad cab
+2
+2 series
+2500 crew cab
+2500 mega cab
+2500 regular cab
+3 series
+300
+3500 crew cab
+3500 mega cab
+3500 regular cab
+370z
+4 series
+488 gtb
+488 spider
+4c spider
+4runner
+5 series
+500l
+500x
+570gt
+570s
+600lt
+7 series
+718 boxster
+718 cayman
+718 spyder
+720s
+8 series
+812 superfast
+86
+911
+318
+320d 
+325
+ e30
+325i
+ e46 
+328 tdi 
+330d 
+525i
+e61 
+530d
+530i 
+535d
+x1
+z3 .
+118d
+3series 
+318i 
+320d 
+325 
+328 
+520d 
+525i 
+530d gt 
+735i 
+750i
+m3 e90 
+z4 
+x3 
+x5
+e4
+m3
