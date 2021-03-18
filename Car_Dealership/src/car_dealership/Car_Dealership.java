@@ -33,6 +33,7 @@ public class Car_Dealership
     static String Color;
     static String DriveTrain;
     static String newModel;
+    static String Rerun;
 
     static int CurrentYear = 2022;
     static final int YearFirstCar = 1886;
@@ -50,32 +51,34 @@ public class Car_Dealership
 
     public static void main(String[] args)
     {
-
-//       colors.add("blue"); //to be read from file lowwwercased
-//       countries.add("australia");//to be read from file lowwwercased
-//       countryCode.add("au");//to be read from file lowwwercased
-//       countryCode.add("fiesta");//to be read from file lowwwercased
-        try
+        do
         {
 
-            QuestionsMake();
-            QuestionsModel();
-            QuestionsModelDetails();
-            Car Car = new Car(BrandName, CountryOfOrigin, ModelName,
-                    YearOfManufacture, DriveType, NumOfDoors,
-                    Color, DriveTrain);
-            Car.CarDisplay();
+            try
+            {
 
+                QuestionsMake();
+                QuestionsModel();
+                QuestionsModelDetails();
+                Car Car = new Car(BrandName, CountryOfOrigin, ModelName,
+                        YearOfManufacture, DriveType, NumOfDoors,
+                        Color, DriveTrain);
+                Car.CarDisplay();
+
+            }
+            catch (Exception e)
+            {
+                System.out.println(e);
+            }
+//        finally
+//        {
+//            read.close();
+//            // fileWriter.close();
+//        }
+            System.out.println("\n Do you want to run the program again? (y/n)");
+            Rerun = in.nextLine().toLowerCase();
         }
-        catch (Exception e)
-        {
-            System.out.println(e);
-        }
-        finally
-        {
-            read.close();
-            // fileWriter.close();
-        }
+        while (Rerun != "yes" || Rerun != "y");
     }
 
     public static void QuestionsMake()
