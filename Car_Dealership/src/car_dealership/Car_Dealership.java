@@ -51,8 +51,8 @@ public class Car_Dealership
 
     public static void main(String[] args)
     {
-       // do
-        //{
+        do
+        {
 
            try
             {
@@ -72,10 +72,10 @@ public class Car_Dealership
                 System.out.println(e);
             }
 
-           // System.out.println("\n Do you want to run the program again? (y/n)");
-            //Rerun = in.nextLine().toLowerCase();
-        //}
-       // while (Rerun == "yes" || Rerun == "y");
+            System.out.println("\n Do you want to run the program again? (y/n)");
+            Rerun = in.nextLine().toLowerCase();
+        }
+        while (Rerun.contains("y"));
     }
 
     public static void ReadQuestions()
