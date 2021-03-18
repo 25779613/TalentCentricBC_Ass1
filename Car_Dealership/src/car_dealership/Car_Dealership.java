@@ -57,6 +57,7 @@ public class Car_Dealership
             try
             {
 
+                ReadQuestions();
                 QuestionsMake();
                 QuestionsModel();
                 QuestionsModelDetails();
@@ -78,10 +79,10 @@ public class Car_Dealership
             System.out.println("\n Do you want to run the program again? (y/n)");
             Rerun = in.nextLine().toLowerCase();
         }
-        while (Rerun != "yes" || Rerun != "y");
+        while (Rerun == "yes" && Rerun == "y");
     }
 
-    public static void QuestionsMake()
+    public static void ReadQuestions()
     {
         try
         {
@@ -90,16 +91,35 @@ public class Car_Dealership
             {
                 brandName.add(read.nextLine());
             }
+            read.close();
+            
             read = new Scanner(new File("Countries.txt "));
             while (read.hasNextLine())
             {
                 countries.add(read.nextLine());
             }
+            read.close();
+            
             read = new Scanner(new File("Countries_alfa2Code.txt "));
             while (read.hasNextLine())
             {
                 countryCode.add(read.nextLine());
             }
+            read.close();
+            
+            read = new Scanner(new File("Car_models.txt"));
+            while (read.hasNextLine())
+            {
+                modelName.add(read.nextLine());
+            }
+            read.close();
+            
+            read = new Scanner(new File("Colors.txt "));
+            while (read.hasNextLine())
+            {
+                colors.add(read.nextLine());
+            }
+            read.close();
 
         }
         catch (Exception e)
@@ -107,6 +127,10 @@ public class Car_Dealership
             System.err.println(" File doesnt exist :" + e.getMessage());
         }
 
+    }
+    public static void QuestionsMake()
+    {
+        
         int counter = 1;
 
         System.out.println("Please enter the brand of the vehicle eg: Audi,BMW,VW");
@@ -132,18 +156,7 @@ public class Car_Dealership
 
     public static void QuestionsModel()
     {
-        try
-        {
-            read = new Scanner(new File("Car_models.txt"));
-            while (read.hasNextLine())
-            {
-                modelName.add(read.nextLine());
-            }
-        }
-        catch (Exception e)
-        {
-            System.err.println("File doesnt exist");
-        }
+        
         counter = 1;
         System.out.println("Please enter the model name eg: E46 320i");
         ModelName = in.nextLine();
@@ -225,21 +238,7 @@ public class Car_Dealership
 
     public static void QuestionsModelDetails()
     {
-
-        try
-        {
-            read = new Scanner(new File("Colors.txt "));
-            while (read.hasNextLine())
-            {
-                colors.add(read.nextLine());
-            }
-
-        }
-        catch (Exception e)
-        {
-            System.err.println(" File doesnt exist :" + e.getMessage());
-        }
-
+        
         System.out.println("Please enter the drive type eg: left/right");//word/letter validation
         DriveType = in.nextLine();
         while (!DriveType.contains("left") && !DriveType.contains("right"))
