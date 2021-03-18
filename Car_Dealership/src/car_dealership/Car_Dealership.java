@@ -51,10 +51,10 @@ public class Car_Dealership
 
     public static void main(String[] args)
     {
-        do
-        {
+       // do
+        //{
 
-         /*   try
+           try
             {
 
                 ReadQuestions();
@@ -71,15 +71,11 @@ public class Car_Dealership
             {
                 System.out.println(e);
             }
-//        finally
-//        {
-//            read.close();
-//            // fileWriter.close();
-//        }*/
-            System.out.println("\n Do you want to run the program again? (y/n)");
-            Rerun = in.nextLine().toLowerCase();
-        }
-        while (Rerun == "yes" || Rerun == "y");
+
+           // System.out.println("\n Do you want to run the program again? (y/n)");
+            //Rerun = in.nextLine().toLowerCase();
+        //}
+       // while (Rerun == "yes" || Rerun == "y");
     }
 
     public static void ReadQuestions()
