@@ -7,7 +7,7 @@ package car_dealership;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.PrintStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,7 +39,7 @@ public class Car_Dealership
     static final int YearFirstCar = 1886;
 
     static Scanner in = new Scanner(System.in);
-    static PrintStream fileWriter;
+    static FileWriter fileWriter;
     static Scanner read;
     static int counter;
 
@@ -54,7 +54,7 @@ public class Car_Dealership
         do
         {
 
-            try
+         /*   try
             {
 
                 ReadQuestions();
@@ -75,11 +75,11 @@ public class Car_Dealership
 //        {
 //            read.close();
 //            // fileWriter.close();
-//        }
+//        }*/
             System.out.println("\n Do you want to run the program again? (y/n)");
             Rerun = in.nextLine().toLowerCase();
         }
-        while (Rerun == "yes" && Rerun == "y");
+        while (Rerun == "yes" || Rerun == "y");
     }
 
     public static void ReadQuestions()
@@ -92,28 +92,28 @@ public class Car_Dealership
                 brandName.add(read.nextLine());
             }
             read.close();
-            
+
             read = new Scanner(new File("Countries.txt "));
             while (read.hasNextLine())
             {
                 countries.add(read.nextLine());
             }
             read.close();
-            
+
             read = new Scanner(new File("Countries_alfa2Code.txt "));
             while (read.hasNextLine())
             {
                 countryCode.add(read.nextLine());
             }
             read.close();
-            
+
             read = new Scanner(new File("Car_models.txt"));
             while (read.hasNextLine())
             {
                 modelName.add(read.nextLine());
             }
             read.close();
-            
+
             read = new Scanner(new File("Colors.txt "));
             while (read.hasNextLine())
             {
@@ -128,9 +128,10 @@ public class Car_Dealership
         }
 
     }
+
     public static void QuestionsMake()
     {
-        
+
         int counter = 1;
 
         System.out.println("Please enter the brand of the vehicle eg: Audi,BMW,VW");
@@ -156,46 +157,68 @@ public class Car_Dealership
 
     public static void QuestionsModel()
     {
-        
+
         counter = 1;
         System.out.println("Please enter the model name eg: E46 320i");
         ModelName = in.nextLine();
         while (!modelName.contains(ModelName.toLowerCase()) && counter < 5)
         {
-            /*if(!modelName.contains(ModelName.toLowerCase()))
-           {
-               System.out.println("Car does not exist in the directory do you wish to add it (y/n)");
-               newModel = in.nextLine();
-               try
+            if (!modelName.contains(ModelName.toLowerCase()))
+            {
+                System.out.println("Car does not exist in the directory do you wish to add it (y/n)");
+                newModel = in.nextLine();
+
+                if (newModel.toLowerCase().contains("y"))
+                {
+                    try
+                    {
+                        fileWriter = new FileWriter(new File("Car_models.txt"), true);
+                        fileWriter.append("\n" + ModelName.toLowerCase());
+                        System.out.println("Vechile model added to directory");
+                        modelName.add(ModelName.toLowerCase());
+                        fileWriter.close();
+
+                    }
+                    catch (Exception e)
+                    {
+                        System.out.println("Error cant add new car please choose different model");
+                    }
+                }
+                else
+                {
+                    System.err.println(counter + "/5 tries. Please re-enter the brand of the vehicle eg: Audi,BMW,VW");
+                    ModelName = in.nextLine();
+                }
+
+                /*try
                {
-                   fileWriter = new PrintStream(new File("Car_models.txt"));
+                   
+                   fileWriter = new FileWriter(new File("Car_models.txt"),true);
                    switch(newModel.toLowerCase())
                    {
                        case "y" : 
-                           fileWriter.println(ModelName.toLowerCase());
-                           System.out.println("Please restart to use updated model directory");
+                           fileWriter.append(ModelName.toLowerCase());
+                           modelName.add(newModel.toLowerCase());
+                           ModelName = newModel;
                            break;
                        case "yes" :
-                           fileWriter.println(ModelName.toLowerCase());
-                           System.out.println("Please restart to use updated model directory");
+                           fileWriter.append("\n" +ModelName.toLowerCase());
+                           modelName.add(newModel.toLowerCase());
+                           ModelName = newModel;
                            break;
                        default:
                            break;
 
                    }
+                   fileWriter.close();
                    
                
                }catch(Exception e)
                {
                    System.out.println("File doesnt exist");
-               }
-               
-               
-               
+               }*/
+            }
 
-           }*/
-            System.err.println(counter + "/5 tries. Please re-enter the brand of the vehicle eg: Audi,BMW,VW");
-            ModelName = in.nextLine();
             counter++;
         }
 
@@ -238,7 +261,7 @@ public class Car_Dealership
 
     public static void QuestionsModelDetails()
     {
-        
+
         System.out.println("Please enter the drive type eg: left/right");//word/letter validation
         DriveType = in.nextLine();
         while (!DriveType.contains("left") && !DriveType.contains("right"))
